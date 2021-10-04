@@ -30,7 +30,7 @@ const media = navigator.mediaDevices.getUserMedia({
 // 描画用canvasの設定
 const cvs = document.getElementById('canvas');
 const ctx = cvs.getContext('2d');
-cvs.width = 640; cvs.height = 360;
+cvs.width = 1280; cvs.height = 960;
 
 // face-apiで顔のランドマークを取得します。
 let faceData;
