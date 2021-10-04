@@ -8,14 +8,13 @@ Promise.all([
 
 // Webカメラの起動
 const video = document.getElementById('video');
-video.style.transform="scaleX(-1)";
+
 
 const media = navigator.mediaDevices.getUserMedia({
     audio: false,
     video: {
         width: 1280,
         height: 960,
-        aspectRatio: 1.33,
         facingMode: "user",
     }
 }).then((stream) => {
@@ -30,6 +29,7 @@ const media = navigator.mediaDevices.getUserMedia({
 // 描画用canvasの設定
 const cvs = document.getElementById('canvas');
 const ctx = cvs.getContext('2d');
+ctx.style.transform="scaleX(-1)";
 cvs.width = 1280; cvs.height = 960;
 
 // face-apiで顔のランドマークを取得します。
@@ -52,7 +52,9 @@ function drawLandMarks(positions) {
 
 function render(){
     requestAnimationFrame(render);
-    getLandMarks();
+    
+    
+    LandMarks();
 }
 
 render();
