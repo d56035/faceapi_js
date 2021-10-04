@@ -13,9 +13,9 @@ video.style.transform="scaleX(-1)";
 const media = navigator.mediaDevices.getUserMedia({
     audio: false,
     video: {
-        width: 640,
-        height: 360,
-        aspectRatio: 1.77,
+        width: 1280,
+        height: 960,
+        aspectRatio: 1.33,
         facingMode: "user",
     }
 }).then((stream) => {
