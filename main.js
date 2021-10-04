@@ -8,7 +8,6 @@ Promise.all([
 
 // Webカメラの起動
 const video = document.getElementById('video');
-video.style.transform="scaleX(-1)"
 
 // Webカメラ許可ダイアログ
 const media = navigator.mediaDevices.getUserMedia({
